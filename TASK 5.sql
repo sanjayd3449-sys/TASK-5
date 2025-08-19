@@ -77,4 +77,30 @@ select * from customer
 
 
 
---2.Use INNER, LEFT, RIGHT, FULL JOIN--INNER JOIN  select o.product_name,o.product_cost,c.customer_name,c.customer_add,O.customer_idfrom customer C inner join orders Oon c.customer_id=o.customer_idorder by o.product_cost--RIGHT OUTER JOINSELECT C.customer_name,C.customer_pno,O.customer_id,O.product_name,O.order_idFROM customer C RIGHT JOIN  orders Oon c.customer_id=o.customer_id--LEFT OUTER JOINSELECT C.customer_name,C.customer_pno,O.customer_id,O.product_name,O.order_idFROM customer C LEFT JOIN  orders Oon c.customer_id=o.customer_id--FULL  JOISELECT C.customer_name,C.customer_pno,O.customer_id,O.product_name,O.order_idFROM customer C FULL JOIN  orders Oon c.customer_id=o.customer_id
+--2.Use INNER, LEFT, RIGHT, FULL JOIN
+
+--INNER JOIN  
+
+select o.product_name,o.product_cost,c.customer_name,c.customer_add,O.customer_id
+from customer C inner join orders O
+on c.customer_id=o.customer_id
+order by o.product_cost
+
+--RIGHT OUTER JOIN
+
+SELECT C.customer_name,C.customer_pno,O.customer_id,O.product_name,O.order_id
+FROM customer C RIGHT JOIN  orders O
+on c.customer_id=o.customer_id
+
+--LEFT OUTER JOIN
+
+SELECT C.customer_name,C.customer_pno,O.customer_id,O.product_name,O.order_id
+FROM customer C LEFT JOIN  orders O
+on c.customer_id=o.customer_id
+
+
+--FULL  JOI
+
+SELECT C.customer_name,C.customer_pno,O.customer_id,O.product_name,O.order_id
+FROM customer C FULL JOIN  orders O
+on c.customer_id=o.customer_id
